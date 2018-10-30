@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <title>Hello, Christopher Robin</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
+<script src="js/jquery.fullpage.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Jua&amp;subset=korean" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+ <script src="js/materialize.min.js" type="text/javascript"></script>
+    <script type="text/javascript"></script>
+   
+
+</head>
+<style>
+     body,html{
+        font-family: "Jua", sans-serif;
+    }
+    p{
+        font-family: "Jua", sans-serif;
+    }
+    </style>
+<body>
+
+    <nav>
+        <div class="chadetanav">
+            <a href="index.html"><img src="img/logo_png.png" alt=""><i class="far fa-caret-square-left"></i> 뒤로가기 </a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="characterpage">
+            <div class="characternav">
+                <div class="characternavin">
+                    <ul>
+                        <li><a href="#charactermain1" onclick="nava()"><img src="img/cn1.png"></a> </li>
+                        <li> <a href="#charactermain2" onclick="nava()"><img src="img/cn2.png"></a> </li>
+                        <li> <a href="#charactermain3" onclick="nava()"><img src="img/cn3.png"></a></li>
+                        <li> <a href="#charactermain4" onclick="nava()"><img src="img/cn4.png"></a> </li>
+                        <li> <a href="#charactermain5" onclick="nava()"><img src="img/cn5.png"></a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="charactermain">
+                <section id="charactermain1">
+                    <div class="cr_pooh">
+
+                    </div>
+                </section>
+                <section id="charactermain2">
+                    <div class="cr_piglet">
+
+                    </div>
+                </section>
+                <section id="charactermain3">
+                    <div class="cr_eyor">
+
+                    </div>
+                </section>
+                <section id="charactermain4">
+                    <div class="cr_tiger">
+
+                    </div>
+                </section>
+                <section id="charactermain5">
+                    <div class="cr_roo">
+
+                    </div>
+                </section>
+
+            </div>
+        </div>
+
+    </main>
+
+
+    <footer>
+        <div class="footerdiv">
+            <div class="footerleft">
+                <p>㈜ Akacloud 대표이사 : 박준형<br>
+                    사업자등록번호 : 0123456789 <br>
+                    대표전화 : 010-4645-6791 메일 : demonic1721@gmail.com<br>
+                    COPYRIGHT(C) Akacloud ALL RIGHTS RESERVED.</p>
+            </div>
+            <div class="footerright">
+                <p>
+                    근무지 : 서울 영등포구 영중로 15 타임스퀘어 2층<br>
+                    제작지원 : 교보문고 교학사 동양미래대학
+                </p>
+            </div>
+        </div>
+
+    </footer>
+    <script>
+        $(function() {
+            $('.nava').click(function() {
+                var speed = 500; /* 스크롤링 속도 */
+                var href = $(this).attr("href");
+                var target = $(href == "#" || href == "" ? 'html' : href);
+                var position = target.offset().top;
+                $('body,html').animate({
+                    scrollTop: position
+                }, speed, 'swing');
+                return false;
+            });
+        });
+    </script>
+
+</body>
+</html>

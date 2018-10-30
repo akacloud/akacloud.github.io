@@ -1,12 +1,208 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/pgwslider.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="js/jquery.fullpage.js"></script>
+    <script src="js/pgwslider.js" type="text/javascript"></script>
+    <script src="js/pgwslider.min.js" type="text/javascript"></script>
+    <script src="js/materialize.min.js" type="text/javascript"></script>
+    <script type="text/javascript"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Jua&amp;subset=korean" rel="stylesheet">
+    <title>Hello, Christopher Robin</title>
 </head>
+
+<style>
+    body,html{
+        font-family: "Jua", sans-serif;
+    }
+    p{
+        font-family: "Jua", sans-serif;
+    }
+    </style>
 <body>
-    
-    <p>박준형</p>
-    <p>1번화면</p>
+    <div class="header-nav">
+        <nav>
+            <div class="navup">
+                <a href="#chapter0" class="nava"><img src="img/logo_png.png" class="navimg" alt=""></a>
+                <button type="button" class="tog"><span class="fa fa-bars" title="menu"></span></button>
+            </div>
+            <div class="navbar">
+
+                <ul>
+                    <li><a href="#chapter0" class="nava">크리스토퍼 로빈</a></li>
+                    <li><a href="#chapter1" class="nava">메인포스터</a></li>
+                    <li><a href="#chapter2" class="nava">예고편</a></li>
+                    <li><a href="#chapter3" class="nava">등장인물</a></li>
+                    <li><a href="#chapter4" class="nava">줄거리</a></li>
+                    <li><a href="#" onclick="eventgo()">이벤트</a></li>
+
+                </ul>
+
+            </div>
+        </nav>
+    </div>
+
+    <div class="mycontents" id="mycontents">
+        <main>
+            <section class="chapter0" id="chapter0">
+                <div class="videomain">
+                    <video autoplay muted loop id="mainvideo">
+                        <source src="img/goodbye.mp4" type="video/mp4" />
+
+                    </video>
+                    <div class="mvcontent">
+                        <img src="img/logo_png.png" alt="">
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="chapter1" id="chapter1">
+
+                <div class="slider">
+
+                    <ul class="pgwSlider">
+                        <li><img src="img/movie_image.jpg" alt="곰돌이푸 다시 만나 행복해 메인 포스터"></li>
+                        <li><img src="img/movie_image2.jpg" alt="곰돌이푸 다시 만나 행복해 포스터"></li>
+                        <li>
+                            <img src="img/movie_image%203.jpg" alt="곰돌이푸 다시 만나 행복해 포스터">
+                        </li>
+                        <li>
+                            <img src="img/movie_image.jpg" alt="곰돌이푸 다시 만나 행복해 포스터">
+                        </li>
+                    </ul>
+
+                </div>
+
+            </section>
+
+            <section class="chapter2" id="chapter2">
+                <div class="sec2sub"></div>
+                <div class="sec2">
+                    <iframe width="100%" height="92%" src="https://www.youtube.com/embed/umwj6e3T2xs" frameborder="0" vspace="100" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+                </div>
+
+            </section>
+
+            <section class="chapter3" id="chapter3">
+
+                <div class="sec3">
+
+                    <a href="character.html">
+                        <div class="cha1" data-aos="fade-left"> <span class="chatext">원 헌드레드 에이커</span></div>
+                    </a>
+                    <div class="cha2" data-aos="fade-up"><span class="chatext">런던</span></div>
+                    <div class="cha3" data-aos="fade-right"><span class="chatext">성우진</span></div>
+                </div>
+
+
+            </section>
+
+            <section class="chapter4" id="chapter4">
+                <div class="synop" data-aos="fade-up">
+
+                    <p>
+                        “어른이 된 나<br>
+                        인생의 쉼표가 필요한 순간,<br>
+                        찾아온 나의 친구들<br>
+                        다시 만나 행복해”<br>
+                        <br>
+                        어른이 된 나 로빈(이완 맥그리거)은 가족도 일도 모두 완벽해 보이지만,<br>
+                        한편 지쳐가는 일상 속에 서있다. <br>
+                        어느 날, 눈 앞에 가장 행복한 시간을 함께했던 비밀 친구 ‘곰돌이 푸와 일행’들이<br>
+                        다시 찾아오게 되고 뜻하지 않게 놀라운 모험 속에 빠져들게 되는데…<br>
+                    </p>
+
+                </div>
+
+
+            </section>
+
+        </main>
+    </div>
+
+    <footer>
+        <div class="footerdiv">
+            <div class="footerleft">
+                <p>㈜ Akacloud 대표이사 : 박준형<br>
+                    사업자등록번호 : 0123456789 <br>
+                    대표전화 : 010-4645-6791 메일 : demonic1721@gmail.com<br>
+                    COPYRIGHT(C) Akacloud ALL RIGHTS RESERVED.</p>
+            </div>
+            <div class="footerright">
+                <div>
+                    <p>
+                        근무지 : 서울 영등포구 영중로 15 타임스퀘어 2층<br>
+                        제작지원 : 교보문고 교학사 동양미래대학
+                    </p>
+                    <ul class="snsicon">
+                        <li><i class="fab fa-facebook-square"></i></li>
+                        <li><i class="fab fa-instagram"></i></li>
+                        <li><i class="fab fa-twitter-square"></i></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var slider = $('.pgwSlider').pgwSlider();
+
+            slider.maxHeight = 20;
+            slider.startSlide();
+
+            
+        });
+
+        function eventgo() {
+            document.location.replace("event.html");
+        }
+
+
+
+
+        $(function() {
+            $('.nava').click(function() {
+                var speed = 500; /* 스크롤링 속도 */
+                var href = $(this).attr("href");
+                var target = $(href == "#" || href == "" ? 'html' : href);
+                var position = target.offset().top;
+                $('body,html').animate({
+                    scrollTop: position
+                }, speed, 'swing');
+                return false;
+            });
+        });
+
+
+        $(function() {
+            $(".tog").click(function() {
+                $(".navbar").slideToggle();
+            });
+        });
+    </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+                duration: 1500,
+            }
+
+        );
+    </script>
 </body>
+
 </html>
