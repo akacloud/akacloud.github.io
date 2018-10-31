@@ -1,21 +1,22 @@
 body,
 html {
-    height: 100vh;
+    height: 100vh; /* 브라우저 높이에 따른 크기조절 */
     margin: 0;
 }
 
 .header-nav {
+    /* 위치고정, 맨위에 표시*/
     position: fixed;
     z-index: 10;
     left: 0;
     top: 0;
     width: 100%;
     background: #fff;
-
     border-bottom: 3px solid #FAED7D;
 }
 
 .navimg {
+    /* 표시안함 */
     display: none;
 }
 
@@ -28,9 +29,8 @@ html {
     width: 100%;
 }
 
-
-
 section {
+    /* 한 섹션을 한페이지로 구성 */
     height: calc(100vh);
     width: 100%;
     display: flex;
@@ -38,15 +38,12 @@ section {
     justify-content: center;
 }
 
-
-/*
-nav ul - 내비게이션 가로로 표현
-*/
 .navbar {
     display: block;
 }
 
 .navbar ul {
+    /* 세로정렬, 리스트표시 제거 */
     display: flex;
     list-style: none;
     margin: 0;
@@ -80,13 +77,11 @@ nav ul - 내비게이션 가로로 표현
     z-index: -1;
     width: 100%;
     height: 100%;
-
 }
 
 .mvcontent {
     width: 100%;
     height: 100%;
-
 }
 
 .mvcontent img {
@@ -100,15 +95,10 @@ nav ul - 내비게이션 가로로 표현
     height: 90vh;
     width: 100%;
     padding-top: 80px;
-
-
 }
-
-
 
 .sec3 {
     display: flex;
-
 }
 
 .sec3 div {
@@ -116,7 +106,6 @@ nav ul - 내비게이션 가로로 표현
     height: 45vh;
     margin: 0;
     margin: 3vh;
-
     border: 3px solid #000;
     border-radius: 10px;
     background-color: #fff;
@@ -126,6 +115,7 @@ nav ul - 내비게이션 가로로 표현
 }
 
 .synop p {
+    /* 텍스트그림자, 박스 그림자 추가 */
     margin: 0;
     padding: 0;
     text-align: left;
@@ -139,11 +129,13 @@ nav ul - 내비게이션 가로로 표현
 }
 
 .cha1 {
+    /* 배경이미지 지정 좌측 중앙정렬 반복제거 크기확대 */
     background: url(../img/hundred.jpg) left center no-repeat;
     background-size: cover;
 }
 
 .cha2 {
+    /* 배경이미지 지정 중앙 중앙정렬 반복제거 크기확대 */
     background: url(../img/london.png) center center no-repeat;
     background-size: cover;
 }
@@ -163,6 +155,7 @@ nav ul - 내비게이션 가로로 표현
 
 
 nav li a:hover {
+    /* 마우스 올릴시 색 변경*/
     background: #BDBDBD;
     color: aliceblue;
 }
@@ -178,8 +171,6 @@ nav li a:hover {
 
 .chapter2 {
     background: #000000;
-
-
 }
 
 .chapter3 {
@@ -193,7 +184,6 @@ nav li a:hover {
 .chapter4 {
     background: #FFFF97;
 }
-
 
 .footerdiv {
     display: flex;
@@ -226,7 +216,6 @@ nav li a:hover {
     display: flex;
     list-style: none;
     margin: 0;
-
     justify-content: center;
 }
 
@@ -239,9 +228,10 @@ nav li a:hover {
 /*-----------------------character.html----------------------------*/
 
 .characterpage
-{   background: #F3A67C;
-    
+{
+    background: #F3A67C;
 }
+
 .chadetanav {
     padding: 0;
     margin: 0;
@@ -253,12 +243,9 @@ nav li a:hover {
     z-index: 10;
     background: #5D5D5D;
     color: #fff;
-    text-align: center;
-    
-   
-    
-    
+    text-align: center;   
 }
+
 .chadetanav a{
     padding: 0;
     margin: 0 auto;
@@ -266,6 +253,7 @@ nav li a:hover {
      font-size: 35px;
     color: #fff;
 }
+
 .chadetanav a img {
     padding-top: 10px;
     height: 40px
@@ -284,9 +272,7 @@ nav li a:hover {
     background: #F3A67C;
     align-items: center;
     vertical-align: middle;
-
 }
-
 
 .charactermain div {
     padding: 0;
@@ -297,62 +283,48 @@ nav li a:hover {
 }
 
 .cr_pooh {
-
     background: url(../img/CR_character_poster_-_Pooh.png) bottom center no-repeat;
     background-size: cover;
 }
 
 .cr_pooh:hover {
+    /* 마우스 올릴시 그림 변경 */
     background: url(../img/CR_character_poster_-_Pooh2.png) bottom center no-repeat;
     background-size: cover;
 }
 
 .cr_piglet {
-
     background: url(../img/CR_character_poster_-_Piglet.png) bottom center no-repeat;
-
 }
 
 .cr_piglet:hover {
-
     background: url(../img/CR_character_poster_-_Piglet2.png) bottom center no-repeat;
     background-size: cover;
-
 }
 
-
 .cr_eyor {
-
     background: url(../img/CR_character_poster_-_Eeyore.png) bottom center no-repeat;
-
 }
 
 .cr_eyor:hover {
-
     background: url(../img/CR_character_poster_-_Eeyore2.png) bottom center no-repeat;
     background-size: cover;
-
 }
 
 .cr_tiger {
     background: url(../img/CR_character_poster_-_Tigger.png) bottom center no-repeat;
-
 }
 
 .cr_tiger:hover {
     background: url(../img/CR_character_poster_-_Tigger2.png) bottom center no-repeat;
     background-size: cover;
-
 }
 
 .cr_roo {
-
     background: url(../img/Christopher_Robin_-_Kanga_&_Roo_poster.jpg) center center no-repeat;
-
 }
 
 .cr_roo:hover {
-
     background: url(../img/Christopher_Robin_-_Kanga_&_Roo_poster2.png) center center no-repeat;
     background-size: cover;
 }
@@ -378,8 +350,6 @@ nav li a:hover {
     color: #000;
 }
 
-
-
 /*-----------------------/character.html----------------------------*/
 /*-----------------------event.html----------------------------*/
 .eventimg {
@@ -389,7 +359,6 @@ nav li a:hover {
 .eventtext {
     text-align: center;
     height: 200px;
-
 }
 
 .eventtext h4 {
@@ -408,7 +377,6 @@ nav li a:hover {
     margin: 0 auto;
     display: table;
     vertical-align: middle;
-
 }
 
 .pagenation {
@@ -428,10 +396,12 @@ nav li a:hover {
 }
 
 .pagenation li:first-child {
+    /* 첫번째 li 설정*/
     border-radius: 10px 0 0 10px;
 }
 
 .pagenation li:last-child {
+    /* 마지막 li 설정 */
     border-right: 1px solid #b9b9b9;
     border-radius: 0 10px 10px 0;
 }
@@ -464,11 +434,9 @@ nav li a:hover {
     border-top: 3px solid #7facc9;
     border-bottom: 3px solid #7facc9;
     background: #fff;
-
 }
 
 .eventtable table tr td img {
-
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -479,26 +447,27 @@ nav li a:hover {
     text-align: center;
     height: 80px;
     border-bottom: 2px solid #bdbdbd;
-
 }
 .eventimg{
-
     background: url(../img/eventmain.png) center center no-repeat;
     background-size: cover;
-   
-   
 }
 .eventback{
     background: #FFFFB3;
 }
 /*-----------------------/event.html----------------------------*/
+/*-----------------------   반응형   ----------------------------*/
+
 @media screen and (min-width: 769px) {
+    /* 화면크기가 769px .navbar를 block으로 표시 + 최우선사항 */
     .navbar {
         display: block !important;
     }
 }
 
 @media screen and (max-width: 768px) {
+    /* 화면크기가 768px 이하일 경우 */
+    
     .navbar {
         display: none;
     }
@@ -522,14 +491,12 @@ nav li a:hover {
         height: 20vh;
         margin: 0;
         margin: 3vh;
-
         border: 3px solid #000;
         border-radius: 10px;
         background-color: #fff;
         text-align: center;
         line-height: 30vh;
         font-size: 3vh;
-
     }
 
     .navup {
@@ -547,14 +514,11 @@ nav li a:hover {
         font-size: 28px;
         opacity: 0.5;
         cursor: pointer;
-
     }
 
     .tog:hover {
         opacity: 0.3;
     }
-
-
 
     .synop p {
         width: 40vh;
@@ -576,11 +540,9 @@ nav li a:hover {
         top: 87%;
         left: 50%;
         transform: translate(-50%, -50%);
-
     }
 
     .footerdiv {
-
         display: block;
         width: 100%;
         height: 220px;
@@ -616,7 +578,6 @@ nav li a:hover {
         background: #F3A67C;
         align-items: center;
         vertical-align: middle;
-
     }
 
     .charactermain div {
@@ -633,10 +594,8 @@ nav li a:hover {
         width: 10vh;
         height: 10vh;
         border-radius: 50%;
-
     }
     table{
         width: 50vh !important;
     }
-
 }

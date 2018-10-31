@@ -17,6 +17,7 @@
     <title>Hello, Christopher Robin</title>
 </head>
 
+<!-- 구글 웹 폰트 적용 -->
 <style>
     body,html{
         font-family: "Jua", sans-serif;
@@ -24,8 +25,11 @@
     p{
         font-family: "Jua", sans-serif;
     }
-    </style>
+</style>
+
 <body>
+   
+    <!--헤더&내비게이션-->
     <div class="header-nav">
         <nav>
             <div class="navup">
@@ -33,7 +37,6 @@
                 <button type="button" class="tog"><span class="fa fa-bars" title="menu"></span></button>
             </div>
             <div class="navbar">
-
                 <ul>
                     <li><a href="#chapter0" class="nava">크리스토퍼 로빈</a></li>
                     <li><a href="#chapter1" class="nava">메인포스터</a></li>
@@ -41,29 +44,30 @@
                     <li><a href="#chapter3" class="nava">등장인물</a></li>
                     <li><a href="#chapter4" class="nava">줄거리</a></li>
                     <li><a href="#" onclick="eventgo()">이벤트</a></li>
-
                 </ul>
 
             </div>
         </nav>
     </div>
-
+    
+    <!-- 메인컨텐츠 -->
     <div class="mycontents" id="mycontents">
         <main>
+           <!-- 페이지 1 _ 영상배경 메인화면 -->
             <section class="chapter0" id="chapter0">
                 <div class="videomain">
-                    <video autoplay muted loop id="mainvideo">
+                    <video autoplay muted loop id="mainvideo">                 <!-- 영상 배경화면 소스-->
                         <source src="img/goodbye.mp4" type="video/mp4" />
-
                     </video>
                     <div class="mvcontent">
-                        <img src="img/logo_png.png" alt="">
+                        <img src="img/logo_png.png" alt="">                    <!-- 영상 배경 위에 올라갈 로고 -->
                     </div>
 
                 </div>
 
             </section>
 
+           <!-- 페이지 2 _ 영화 포스터 캐러셀 -->
             <section class="chapter1" id="chapter1">
 
                 <div class="slider">
@@ -78,20 +82,18 @@
                             <img src="img/movie_image.jpg" alt="곰돌이푸 다시 만나 행복해 포스터">
                         </li>
                     </ul>
-
                 </div>
-
             </section>
-
+            
+            <!-- 페이지 3 _ 영화 예고편 -->
             <section class="chapter2" id="chapter2">
                 <div class="sec2sub"></div>
                 <div class="sec2">
                     <iframe width="100%" height="92%" src="https://www.youtube.com/embed/umwj6e3T2xs" frameborder="0" vspace="100" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
                 </div>
-
             </section>
-
+            
+            <!-- 페이지 4 _ 등장인물 _ 파트별로 이동 -->
             <section class="chapter3" id="chapter3">
 
                 <div class="sec3">
@@ -102,12 +104,11 @@
                     <div class="cha2" data-aos="fade-up"><span class="chatext">런던</span></div>
                     <div class="cha3" data-aos="fade-right"><span class="chatext">성우진</span></div>
                 </div>
-
-
             </section>
 
+            <!-- 페이지 5 _ 영화 줄거리 -->
             <section class="chapter4" id="chapter4">
-                <div class="synop" data-aos="fade-up">
+                <div class="synop" data-aos="fade-up"> <!-- data-aos="fade-up" => AOS기능중 [fade-up]을 사용한다-->
 
                     <p>
                         “어른이 된 나<br>
@@ -122,13 +123,11 @@
                     </p>
 
                 </div>
-
-
             </section>
-
         </main>
     </div>
 
+    <!-- 푸터 -->
     <footer>
         <div class="footerdiv">
             <div class="footerleft">
@@ -149,34 +148,30 @@
                         <li><i class="fab fa-twitter-square"></i></li>
                     </ul>
                 </div>
-
             </div>
         </div>
-
     </footer>
 
-
-
     <script type="text/javascript">
+        /* pgwSlider 작동 */
         $(document).ready(function() {
-            var slider = $('.pgwSlider').pgwSlider();
-            slider.maxHeight = 20;
-            slider.startSlide();
+            var slider = $('.pgwSlider').pgwSlider();   /* 슬라이더 연결 */
+            slider.maxHeight = 20;                      /* 크기지정 */
+            slider.startSlide();                        /* 슬라이더 시작 */
         });
 
+        /* 클릭시 event.html로 이동 */
         function eventgo() {
             document.location.replace("event.html");
         }
 
-
-
-
+        /* 원페이지 스크롤 이동 코드 */
         $(function() {
             $('.nava').click(function() {
-                var speed = 500; /* 스크롤링 속도 */
-                var href = $(this).attr("href");
-                var target = $(href == "#" || href == "" ? 'html' : href);
-                var position = target.offset().top;
+                var speed = 500;                                            /* 스크롤링 속도 */
+                var href = $(this).attr("href");                            /* href값 받아오기 */
+                var target = $(href == "#" || href == "" ? 'html' : href);  /* #또는 공백인지 확인*/
+                var position = target.offset().top;                         /* 최상단에서 지정된 곳까지 부드럽게 이동 */
                 $('body,html').animate({
                     scrollTop: position
                 }, speed, 'swing');
@@ -184,21 +179,23 @@
             });
         });
 
-
+        /* 토글버튼 함수 _ 반응형 _ 화면크기 768px 이하*/
         $(function() {
             $(".tog").click(function() {
-                $(".navbar").slideToggle();
+                $(".navbar").slideToggle(); /* .tog를 누르면 .navbar가 슬라이드로 나온다 */
             });
         });
+
     </script>
 
+   <!-- AOS 사용 -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init({
-                duration: 1500,
-            }
-        );
-    </script>
+            duration: 1500,     /* 속도제어 */
+        });
+
+    </script> 
 </body>
 
 </html>
